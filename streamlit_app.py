@@ -35,6 +35,8 @@ streamlit.dataframe(fruits_to_show)
 
 
 #streamlit.header("Fruityvice Fruit Advice")
+
+streamlit.header("The fruit load list contains:")
 def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
     my_cur.execute("select * from fruit_load_list")
@@ -46,7 +48,7 @@ if streamlit.button('get fruit load list'):
   my_data_rows = get_fruit_load_list
   streamlit.dataframe(my_data_rows)
   
-streamlit.header("The fruit load list contains:")
+
 #snowflake related functions
 try:
   fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
