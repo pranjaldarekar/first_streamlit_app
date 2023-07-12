@@ -50,18 +50,18 @@ if streamlit.button('get fruit load list'):
   streamlit.dataframe(my_data_rows)
 streamlit.stop()
 
-#try:
-  #fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
-  #if not fruit_choice:
-    #streamlit.error("Please select a fruit to get information.")
-  #else:
-    #back_from_function = get_fruityvice_data(fruit_choice)
-    #streamlit.dataframe(back_from_function)
+try:
+  fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+  if not fruit_choice:
+    streamlit.error("Please select a fruit to get information.")
+  else:
+    back_from_function = get_fruityvice_data(fruit_choice)
+    streamlit.dataframe(back_from_function)
      
      #streamlit.dataframe(fruityvice_normalize)
 
-#except URLError as e:
-    #streamlit.error()
+except URLError as e:
+    streamlit.error()
     
 #streamlit.write('The user entered ', fruit_choice)
 
