@@ -31,6 +31,8 @@ def get_fruityvice_data(this_fruit_choice):
   fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
   return fruityvice_normalized
   
+streamlit.dataframe(fruityvice_normalized)  
+
 #New Section to display fruityvice api response
 
 
@@ -58,7 +60,6 @@ try:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.dataframe(back_from_function)
      
-     streamlit.dataframe(fruityvice_normalize)
 
 except URLError as e:
     streamlit.error()
