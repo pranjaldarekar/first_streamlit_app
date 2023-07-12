@@ -31,7 +31,7 @@ def get_fruityvice_data(this_fruit_choice):
   fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
   return fruityvice_normalized
   
-streamlit.dataframe(fruityvice_normalized)  
+streamlit.dataframe(fruityvice_normalize)  
 
 #New Section to display fruityvice api response
 
